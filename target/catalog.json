@@ -1,0 +1,245 @@
+{
+    "metadata": {
+        "dbt_schema_version": "https://schemas.getdbt.com/dbt/catalog/v1.json",
+        "dbt_version": "1.6.6",
+        "generated_at": "2023-10-27T17:35:18.071386Z",
+        "invocation_id": "fc2513db-8793-46b8-9200-55ada7126678",
+        "env": {}
+    },
+    "nodes": {
+        "model.projeto_final.tb_calendar": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "public",
+                "name": "tb_calendar",
+                "database": "kuziztee",
+                "comment": null,
+                "owner": "kuziztee"
+            },
+            "columns": {
+                "listing_id": {
+                    "type": "text",
+                    "index": 1,
+                    "name": "listing_id",
+                    "comment": null
+                },
+                "date": {
+                    "type": "date",
+                    "index": 2,
+                    "name": "date",
+                    "comment": null
+                },
+                "adjusted_price": {
+                    "type": "double precision",
+                    "index": 3,
+                    "name": "adjusted_price",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.projeto_final.tb_calendar"
+        },
+        "model.projeto_final.tb_listing": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "public",
+                "name": "tb_listing",
+                "database": "kuziztee",
+                "comment": null,
+                "owner": "kuziztee"
+            },
+            "columns": {
+                "id": {
+                    "type": "text",
+                    "index": 1,
+                    "name": "id",
+                    "comment": null
+                },
+                "property_type": {
+                    "type": "text",
+                    "index": 2,
+                    "name": "property_type",
+                    "comment": null
+                },
+                "room_type": {
+                    "type": "text",
+                    "index": 3,
+                    "name": "room_type",
+                    "comment": null
+                },
+                "host_id": {
+                    "type": "text",
+                    "index": 4,
+                    "name": "host_id",
+                    "comment": null
+                },
+                "price": {
+                    "type": "double precision",
+                    "index": 5,
+                    "name": "price",
+                    "comment": null
+                },
+                "number_of_reviews": {
+                    "type": "integer",
+                    "index": 6,
+                    "name": "number_of_reviews",
+                    "comment": null
+                },
+                "minimum_nights": {
+                    "type": "integer",
+                    "index": 7,
+                    "name": "minimum_nights",
+                    "comment": null
+                },
+                "maximum_nights": {
+                    "type": "integer",
+                    "index": 8,
+                    "name": "maximum_nights",
+                    "comment": null
+                },
+                "reviews_per_month": {
+                    "type": "double precision",
+                    "index": 9,
+                    "name": "reviews_per_month",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.projeto_final.tb_listing"
+        },
+        "model.projeto_final.tb_listing_avg": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "public",
+                "name": "tb_listing_avg",
+                "database": "kuziztee",
+                "comment": null,
+                "owner": "kuziztee"
+            },
+            "columns": {
+                "host_id": {
+                    "type": "text",
+                    "index": 1,
+                    "name": "host_id",
+                    "comment": null
+                },
+                "id": {
+                    "type": "text",
+                    "index": 2,
+                    "name": "id",
+                    "comment": null
+                },
+                "avg_price": {
+                    "type": "double precision",
+                    "index": 3,
+                    "name": "avg_price",
+                    "comment": null
+                },
+                "avg_adjusted_price": {
+                    "type": "double precision",
+                    "index": 4,
+                    "name": "avg_adjusted_price",
+                    "comment": null
+                },
+                "min_price": {
+                    "type": "double precision",
+                    "index": 5,
+                    "name": "min_price",
+                    "comment": null
+                },
+                "max_price": {
+                    "type": "double precision",
+                    "index": 6,
+                    "name": "max_price",
+                    "comment": null
+                },
+                "qtd": {
+                    "type": "bigint",
+                    "index": 7,
+                    "name": "qtd",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.projeto_final.tb_listing_avg"
+        },
+        "model.projeto_final.tb_reviews": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "public",
+                "name": "tb_reviews",
+                "database": "kuziztee",
+                "comment": null,
+                "owner": "kuziztee"
+            },
+            "columns": {
+                "listing_id": {
+                    "type": "text",
+                    "index": 1,
+                    "name": "listing_id",
+                    "comment": null
+                },
+                "date": {
+                    "type": "date",
+                    "index": 2,
+                    "name": "date",
+                    "comment": null
+                },
+                "reviewer_id": {
+                    "type": "text",
+                    "index": 3,
+                    "name": "reviewer_id",
+                    "comment": null
+                },
+                "reviewer_name": {
+                    "type": "text",
+                    "index": 4,
+                    "name": "reviewer_name",
+                    "comment": null
+                },
+                "comments": {
+                    "type": "text",
+                    "index": 5,
+                    "name": "comments",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.projeto_final.tb_reviews"
+        }
+    },
+    "sources": {},
+    "errors": null
+}
