@@ -1,0 +1,34 @@
+models:
+  - name: tb_listing
+    columns: 
+      - name: id
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+
+  - name: tb_calendar
+    columns: 
+      - name: listing_id
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+ 
+  - name: tb_reviews
+    columns: 
+      - name: listing_id
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: text
+  
+  - name: tb_listing_avg
+    tests:
+      - dbt_expectations.expect_column_pair_values_A_to_be_greater_than_B:
+          column_A: avg_price
+          column_B: min_price
+          or_equal: True
+  
+
+      
