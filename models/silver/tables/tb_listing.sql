@@ -2,7 +2,7 @@
     config(
         unique_key="id",
         on_schema_changes="sync_all_columns",
-        matearialized="table"
+        materialized="table"
     )
 }}
 
