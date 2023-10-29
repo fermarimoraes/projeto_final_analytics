@@ -1,0 +1,2 @@
+Post do notebook usado para extrair os dados para a camada raw:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/8175701136087790/2360686585716667/3938541487735545/latest.html
